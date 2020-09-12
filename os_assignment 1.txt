@@ -1,0 +1,299 @@
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+
+==>date +%a
+Mon
+==>date +%A
+Monday
+==>date +%b
+Sep
+==> date +%c
+Mon Sep  7 22:33:26 2020
+==>date +%B
+September
+
+==> date +%C
+20
+
+==>date +%d
+07
+
+==> date +%D
+09/07/20
+
+==> date +%e
+ 7
+==> date +%T
+22:35:52
+==> cal 20
+      January               February               March
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6               1  2  3                  1  2
+ 7  8  9 10 11 12 13   4  5  6  7  8  9 10   3  4  5  6  7  8  9
+14 15 16 17 18 19 20  11 12 13 14 15 16 17  10 11 12 13 14 15 16
+21 22 23 24 25 26 27  18 19 20 21 22 23 24  17 18 19 20 21 22 23
+28 29 30 31           25 26 27 28 29        24 25 26 27 28 29 30
+                                            31
+
+       April                  May                   June
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6            1  2  3  4                     1
+ 7  8  9 10 11 12 13   5  6  7  8  9 10 11   2  3  4  5  6  7  8
+14 15 16 17 18 19 20  12 13 14 15 16 17 18   9 10 11 12 13 14 15
+21 22 23 24 25 26 27  19 20 21 22 23 24 25  16 17 18 19 20 21 22
+28 29 30              26 27 28 29 30 31     23 24 25 26 27 28 29
+                                            30
+
+        July                 August              September
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6               1  2  3   1  2  3  4  5  6  7
+ 7  8  9 10 11 12 13   4  5  6  7  8  9 10   8  9 10 11 12 13 14
+14 15 16 17 18 19 20  11 12 13 14 15 16 17  15 16 17 18 19 20 21
+21 22 23 24 25 26 27  18 19 20 21 22 23 24  22 23 24 25 26 27 28
+28 29 30 31           25 26 27 28 29 30 31  29 30
+
+
+      October               November              December
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+       1  2  3  4  5                  1  2   1  2  3  4  5  6  7
+ 6  7  8  9 10 11 12   3  4  5  6  7  8  9   8  9 10 11 12 13 14
+13 14 15 16 17 18 19  10 11 12 13 14 15 16  15 16 17 18 19 20 21
+20 21 22 23 24 25 26  17 18 19 20 21 22 23  22 23 24 25 26 27 28
+27 28 29 30 31        24 25 26 27 28 29 30  29 30 31
+==>cal jan 20
+ January 20
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+==> bc -v
+bc 1.07.1
+
+ ==>echo -e "hanman\Et"
+hanman
+==> echo -e "hanman\nt"
+hanman
+t
+==> echo -e "hanman\rt"
+tanman
+==> echo -e "hanman\tt"
+hanman  t
+==>
+
+
+
+
+
+
+==> whoami
+hanu
+
+
+
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac.
+
+==> mkdir a
+hanu@DESKTOP-UN6PSP8:~$ mkdir b
+hanu@DESKTOP-UN6PSP8:~$ mkdir c
+hanu@DESKTOP-UN6PSP8:~$ cd a
+hanu@DESKTOP-UN6PSP8:~/a$ cat >a.txt
+1.hanmanthanu@DESKTOP-UN6PSP8:~/a$
+hanu@DESKTOP-UN6PSP8:~/a$ ls
+a.txt
+hanu@DESKTOP-UN6PSP8:~/a$ cd ..
+hanu@DESKTOP-UN6PSP8:~$ cd b
+hanu@DESKTOP-UN6PSP8:~/b$ ls
+hanu@DESKTOP-UN6PSP8:~/b$ cat >b.txt
+2.hanmant
+hanu@DESKTOP-UN6PSP8:~/b$ cd ..
+hanu@DESKTOP-UN6PSP8:~$ cd c
+hanu@DESKTOP-UN6PSP8:~/c$ ls
+hanu@DESKTOP-UN6PSP8:~/c$ cat >c.txt
+3.hanmant
+hanu@DESKTOP-UN6PSP8:~/c$ ls
+c.txt
+hanu@DESKTOP-UN6PSP8:~/c$ cd ..
+hanu@DESKTOP-UN6PSP8:~$ ls
+a  b  c  osdemo
+
+
+a)//copy c directory into a
+ ==>cp -R c a
+b)//move directory b to c
+ ==>mv b c
+c)//Create alias of ls -lh command to your name.
+==>alias l="ls -al"
+d)//Change Directory name a to cdac.
+==> mv a cdac
+
+
+==============================================================================
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	B)Create file.txt using cat and edit that using nano editor.
+	c)Create 5 empty files using touch command
+	D)Remove previously created directory a , b and c.
+==>hanu@DESKTOP-UN6PSP8:~/c/a1Q3$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  file5.txt
+a)==>grep s *           //find s in all files
+ or grep s file1.txt file2.txt etc..
+
+b)==> cat >file.txt
+hanmant bawagehanu@DESKTOP-UN6PSP8:~/c/a1Q3$
+hanu@DESKTOP-UN6PSP8:~/c/a1Q3$ nano file.txt
+hanu@DESKTOP-UN6PSP8:~/c/a1Q3$ cat file.txt
+hanmant bawage
+cdac kharghar
+
+c)==>touch a.txt b.txt c.txt d.txt e.txt
+d)==>rm -r c
+
+==============================================================================
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+	b) Display line numbers along with content
+	c) Display the file in reverse order using tac
+	d) Combine multiple files using cat command
+
+==>
+a)
+hanu@DESKTOP-UN6PSP8:~/cdac$ vi q5.txt
+b)
+hanu@DESKTOP-UN6PSP8:~/cdac$ cat q5.txt
+this is question four in assignment one
+
+c)
+hanu@DESKTOP-UN6PSP8:~/cdac$ cat -n q5.txt
+     1  this is question four in assignment one
+d)
+cat q1.txt q2.txt>q3.txt
+hanu@DESKTOP-UN6PSP8:~/cdac$ ls
+a.txt  c  q1.txt  q2.txt  q3.txt  q5.txt
+hanu@DESKTOP-UN6PSP8:~/cdac$ cat q3.txt
+
+=============================================================================
+
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row 
+	b) sort the files in ascending, descending order
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+
+===============================================================================
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+==>a)user can read and write the file a.txt and b.txt
+hanu@DESKTOP-UN6PSP8:~/hani$ chmod 600 b.txt c.txt d.txt a.txt
+hanu@DESKTOP-UN6PSP8:~/hani$ l
+total 0
+drwx------ 1 hanu hanu 512 Sep  8 21:16 .
+drwxr-xr-x 1 hanu hanu 512 Sep  8 21:15 ..
+-rw------- 1 hanu hanu   5 Sep  8 21:16 a.txt
+-rw------- 1 hanu hanu   6 Sep  8 21:16 b.txt
+-rw------- 1 hanu hanu   5 Sep  8 21:16 c.txt
+-rw------- 1 hanu hanu   6 Sep  8 21:16 d.txt
+
+==>b)user can write the file c.txt
+chmod 200 c.txt
+hanu@DESKTOP-UN6PSP8:~/hani$ l
+total 0
+drwx------ 1 hanu hanu 512 Sep  8 21:16 .
+drwxr-xr-x 1 hanu hanu 512 Sep  8 21:15 ..
+-rw------- 1 hanu hanu   5 Sep  8 21:16 a.txt
+-rw------- 1 hanu hanu   6 Sep  8 21:16 b.txt
+--w------- 1 hanu hanu   5 Sep  8 21:16 c.txt
+-rw------- 1 hanu hanu   6 Sep  8 21:16 d.txt
+
+==>c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+==>chmod 100 hani
+
+
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+==>chmod 400 hani
+
+Q4. Use echo to list the all files of your home directory.
+==> echo *
+Q5. Use echo to list the all files of /etc/ directory
+==>
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+Q7. Use echo to append your name to a.txt
+==>
+
+
+==================================================================================
+
+Note:Many operation might not work.Analyze them
+1.	Create Three level nested directory a,b and c
+a)Create at least one hidden file in each directory
+==>hanu@DESKTOP-UN6PSP8:~$ cd 1st
+hanu@DESKTOP-UN6PSP8:~/1st$ cd 2nd
+hanu@DESKTOP-UN6PSP8:~/1st/2nd$ cd 3rd
+hanu@DESKTOP-UN6PSP8:~/1st/2nd/3rd$
+b)Create at least one normal text file in each directory
+hanu@DESKTOP-UN6PSP8:~/1st$ cat >1st.txt
+this is first filr infirst layer
+hanu@DESKTOP-UN6PSP8:~/1st$ ls
+1st.txt  2nd
+hanu@DESKTOP-UN6PSP8:~/1st$ cd 2nd
+hanu@DESKTOP-UN6PSP8:~/1st/2nd$ vi 2.txt
+hanu@DESKTOP-UN6PSP8:~/1st/2nd$ vi 2.txt
+hanu@DESKTOP-UN6PSP8:~/1st/2nd$ cat 2.txt
+this is 1st fine in 2nd layer
+c)Copy c into a
+d)Copy file inside a into b
+
+2.	Change the third level directory c permission to read only
+3.	Try copying third level c directory to outside of a
+4.	Create the directory  “data“ inside b
+5.	Change the permission of b to read and write only
+6.	Create directory “data2”  inside b
+7.	Create data.txt file inside b
+8.	Rename the second level directory c to copied_dir
+9.	Change permission of copied_dir to only executable
+10.	Try ls on copied_dir
+11.	Try moving copied_dir to outside of a
+12.	Try moving data directory outside of a
+13.	Now change the owner of the directory a to root
+14.	Change permission of a to read write and executable to only user
+15.	Try creating directory sample inside a
+16.	Create directory x outside a
+17.	Try moving x inside a
+18.	Create directory movies
+19.	Change group of movies to sudo
+20.	Change group of movies to avahi
+21.	Try changing permission after changing ownership to root
+22.	Try Changing permission after changing group to sudo without sudo
+23.	Try Changing owner and group both to root
+24.	Try changinging permission
+25.	Try deleting the file
+
+	
+	
